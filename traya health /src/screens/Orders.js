@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {Text, View, StyleSheet, FlatList} from 'react-native';
+import {Text, View, StyleSheet, FlatList, Image} from 'react-native';
 import CmpButton from '../Components/Button';
 import { useIsFocused } from '@react-navigation/native';
 
@@ -32,7 +32,11 @@ const isFocused = useIsFocused();
     return (
       <>
         <View style={styles.horz}>
-          <View style={styles.image}></View>
+          <View style={styles.image}>
+            <Image source={require('../assets/hair.jpeg')}
+            style={{height:70,width:70,resizeMode:"stretch"}}
+            />
+          </View>
           <View>
             <Text style={[styles.subText, {paddingLeft: 15}]}>
              {apidata?.product}
